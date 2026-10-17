@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App | HTML, CSS and JavaScript Project</title>
+    <meta name="description" content="A simple to-do list app to add, complete, filter and delete tasks. Tasks are saved in your browser. Built with HTML, CSS and JavaScript by Shankar Saini.">
+    <meta name="author" content="Shankar Saini">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0f766e">
+    <link rel="canonical" href="https://shankar-saini.github.io/todo-app/">
+    <link rel="alternate" hreflang="en-in" href="https://shankar-saini.github.io/todo-app/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shankar Saini | Projects">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:url" content="https://shankar-saini.github.io/todo-app/">
+    <meta property="og:title" content="To-Do List App | HTML, CSS and JavaScript Project">
+    <meta property="og:description" content="A simple to-do list app to add, complete, filter and delete tasks. Tasks are saved in your browser. Built with HTML, CSS and JavaScript by Shankar Saini.">
+    <meta property="og:image" content="https://shankar-saini.github.io/shankar-saini-seo-web-developer.png">
+    <meta property="og:image:alt" content="Shankar Saini, SEO specialist and web developer from Jaipur">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="To-Do List App | HTML, CSS and JavaScript Project">
+    <meta name="twitter:description" content="A simple to-do list app to add, complete, filter and delete tasks. Tasks are saved in your browser. Built with HTML, CSS and JavaScript by Shankar Saini.">
+    <meta name="twitter:image" content="https://shankar-saini.github.io/shankar-saini-seo-web-developer.png">
+
+    <link rel="stylesheet" href="todo.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {"@type": "WebApplication", "@id": "https://shankar-saini.github.io/todo-app/#app", "name": "To-Do List App", "url": "https://shankar-saini.github.io/todo-app/",
+          "applicationCategory": "ProductivityApplication", "operatingSystem": "Any (runs in the browser)",
+          "description": "A simple to-do list app to add, complete, filter and delete tasks. Tasks are saved in your browser. Built with HTML, CSS and JavaScript by Shankar Saini.", "inLanguage": "en-IN",
+          "author": {"@id": "https://shankar-saini.github.io/#person"},
+          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shankar-saini.github.io/"},
+          {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://shankar-saini.github.io/projects"},
+          {"@type": "ListItem", "position": 3, "name": "To-Do List App", "item": "https://shankar-saini.github.io/todo-app/"}]},
+        {"@type": "Person", "@id": "https://shankar-saini.github.io/#person", "name": "Shankar Saini", "url": "https://shankar-saini.github.io/"}
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <main class="page">
+
+        <section class="app" aria-labelledby="app-title">
+            <h1 id="app-title">My To-Do List</h1>
+            <p class="date" id="today"></p>
+
+            <form id="add-form" class="add-form" autocomplete="off">
+                <label for="task-input" class="sr">New task</label>
+                <input type="text" id="task-input" placeholder="What do you need to do?" maxlength="120">
+                <button type="submit" class="add-btn">Add</button>
+            </form>
+            <p class="error" id="error" role="alert"></p>
+
+            <div class="tabs" role="group" aria-label="Filter tasks">
+                <button type="button" class="tab active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="tab" data-filter="active" aria-pressed="false">Active</button>
+                <button type="button" class="tab" data-filter="done" aria-pressed="false">Done</button>
+            </div>
+
+            <ul class="list" id="list"></ul>
+            <p class="empty" id="empty">No tasks yet. Add your first one above.</p>
+
+            <div class="footer-row">
+                <span id="count">0 tasks left</span>
+                <button type="button" id="clear-done" class="link-btn">Clear completed</button>
+            </div>
+
+            <p class="demo-note">Your tasks are saved only in this browser (localStorage). Nothing is sent anywhere.</p>
+        </section>
+
+        <!-- More projects -->
+        <section class="more" aria-labelledby="more-title">
+            <h2 id="more-title">More Projects by Shankar Saini</h2>
+            <p>
+                This is a mini practice website made by
+                <a href="https://shankar-saini.github.io/" rel="author">Shankar Saini</a>.
+                Have a look at my other HTML, CSS and JavaScript projects too:
+            </p>
+            <p class="more-links">
+                <a href="https://shankar-saini.github.io/calculator/">Calculator</a>
+                <a href="https://shankar-saini.github.io/login-page/">Login page</a>
+                <a href="https://shankar-saini.github.io/travel-time/">Travel Time website</a>
+                <a href="https://shankar-saini.github.io/restaurant-website/">Restaurant website</a>
+                <a href="https://shankar-saini.github.io/projects">See all my projects</a>
+                <a href="https://github.com/shankar-saini/todo-app" rel="noopener">View the code on GitHub</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Shankar Saini · Practice project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
